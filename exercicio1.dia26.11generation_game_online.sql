@@ -42,17 +42,9 @@ SELECT * FROM tb_personagens WHERE poder_defesa BETWEEN 1000 AND 2000;
 
 SELECT * FROM tb_personagens WHERE nome LIKE '%C%';
 
-SELECT 
-    tb_personagens.*, 
-    tb_classes.nome AS classe,
-    tb_classes.tipo,
-    tb_classes.descricao
-FROM tb_personagens INNER JOIN tb_classes ON tb_personagens.classe_id = tb_classes.id;
+SELECT tb_personagens.*, tb_classes.nome AS classe, tb_classes.tipo, tb_classes.descricao FROM tb_personagens INNER JOIN tb_classes ON tb_personagens.classe_id = tb_classes.id;
 
-SELECT 
-    p.*, 
-    c.nome AS classe
-FROM tb_personagens p INNER JOIN tb_classes c ON p.classe_id = c.id WHERE c.nome = 'Arqueiro';
+SELECT p.*, c.nome AS classe FROM tb_personagens p INNER JOIN tb_classes c ON p.classe_id = c.id WHERE c.nome = 'Arqueiro';
 
 
 
